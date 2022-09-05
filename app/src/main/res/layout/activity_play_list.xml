@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:id="@+id/root"
+    tools:context=".activities.PlayListActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backBtnPLA"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="35dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton79"
+        app:layout_constraintEnd_toEndOf="@+id/glowButton79"
+        app:layout_constraintStart_toStartOf="@+id/glowButton79"
+        app:layout_constraintTop_toTopOf="@+id/glowButton79"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButton79"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+
+        android:id="@+id/playlistNamePA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="PlayLists"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playlistRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="40dp"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_icon"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playlistNamePA" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPlayListBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="45dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add"
+        android:contentDescription="TODO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

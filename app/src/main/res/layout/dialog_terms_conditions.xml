@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="303dp"
+            android:layout_height="67dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginStart="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/read_these_terms_and_conditions_carefully_before_using_things_to_do_mobile_application"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/terms2"
+            android:layout_width="304dp"
+            android:layout_height="84dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginStart="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="0dp"
+            android:text="@string/your_access_to_and_use_of_the_service_is_conditioned_on_your_acceptance_of_and_compliance_with_these_terms_these_terms_apply_to_all_visitors_users_and_others_who_access_or_use_the_service"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms" />
+
+        <TextView
+            android:id="@+id/terms3"
+            android:layout_width="301dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginStart="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/things_to_do_application_may_contain_links_to_third_party_websites_that_are_not_owned_or_controlled_by_developers_developer_shall_not_be_responsible_or_liable_directly_or_indirectly_for_any_damage_or_loss_or_alleged_to_be_caused_by_or_in_connection_with_use_of_or_reliace_on_any_such_content_and_information"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms2" />
+
+        <TextView
+            android:id="@+id/terms4"
+            android:layout_width="301dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginStart="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="0dp"
+            android:text="@string/user_must_agree_not_to_reverse_engineer_decompile_or_attempt_to_gain_access_to_code_or_assets_of_things_to_do_application"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms3" />
+
+        <TextView
+            android:id="@+id/terms5"
+            android:layout_width="298dp"
+            android:layout_height="68dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginStart="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/developer_reverse_the_right_at_our_sole_discretion_to_modify_or_replace_these_terms_at_any_time_without_notice"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms4" />
+
+        <TextView
+            android:id="@+id/terms6"
+            android:layout_width="300dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginStart="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="0dp"
+            android:text="@string/if_you_have_any_questions_about_these_terms_please_contact_developer"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms5" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="233dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/agree"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/agree"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/myButtonTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

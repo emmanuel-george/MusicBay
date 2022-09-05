@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PlayerActivity">
+
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.6"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/musiccover" />
+
+    <TextView
+        android:id="@+id/songNamePA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekArc"
+        tools:text="Song Name" />
+
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songNamePA"
+        tools:text="Artist Name" />
+
+
+    <TextView
+        android:id="@+id/durationPlayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="1:28"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekArc" />
+
+    <TextView
+        android:id="@+id/durationTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="4:28"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekArc" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView9"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        app:cardBackgroundColor="#000000"
+        app:cardCornerRadius="270dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/glowBtn"
+        app:layout_constraintEnd_toEndOf="@+id/glowBtn"
+        app:layout_constraintStart_toStartOf="@+id/glowBtn"
+        app:layout_constraintTop_toTopOf="@+id/glowBtn">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/songImgPA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/music" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/play_pausePA"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_pauseicon"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/glowBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/glowBtn1"
+        app:layout_constraintStart_toStartOf="@+id/glowBtn1"
+        app:layout_constraintTop_toTopOf="@+id/glowBtn1"
+        app:maxImageSize="40dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/repeatBtnPA"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_repeat_off"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="40dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowBtn2"
+        app:layout_constraintEnd_toEndOf="@+id/glowBtn2"
+        app:layout_constraintStart_toStartOf="@+id/glowBtn2"
+        app:layout_constraintTop_toTopOf="@+id/glowBtn2"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nextBtnPA"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:scaleType="center"
+        android:focusable="true"
+        app:fabCustomSize="40dp"
+        android:src="@drawable/ic_skip_next"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton2"
+        app:layout_constraintEnd_toEndOf="@+id/glowButton2"
+        app:layout_constraintStart_toStartOf="@+id/glowButton2"
+        app:layout_constraintTop_toTopOf="@+id/glowButton2"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/previousBtnPA"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_skip_previous"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="40dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton4"
+        app:layout_constraintEnd_toEndOf="@+id/glowButton4"
+        app:layout_constraintStart_toStartOf="@+id/glowButton4"
+        app:layout_constraintTop_toTopOf="@+id/glowButton4"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/favoriteBtnPA"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_unlike"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="35dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton6"
+        app:layout_constraintEnd_toEndOf="@+id/glowButton6"
+        app:layout_constraintStart_toStartOf="@+id/glowButton6"
+        app:layout_constraintTop_toTopOf="@+id/glowButton6"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backBtnPA"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="35dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton"
+        app:layout_constraintEnd_toEndOf="@+id/glowButton"
+        app:layout_constraintStart_toStartOf="@+id/glowButton"
+        app:layout_constraintTop_toTopOf="@+id/glowButton"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.gauravk.audiovisualizer.visualizer.BarVisualizer
+        android:id="@+id/blast"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:avColor="@color/colorPrimary"
+        app:avDensity="0.5"
+        app:avSpeed="normal"
+        app:avType="outline"
+        app:avWidth="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowBtn"
+        android:layout_width="355dp"
+        android:layout_height="355dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        app:cornerRadius="150dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glowButton6"
+        app:pressedGlowSize="25dp"
+        app:unpressedGlowSize="25dp"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowBtn1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_artist"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowBtn2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glowButton2"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowBtn3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glowButton4"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/shuffleBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_shuffle_off"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="45dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowBtn3"
+        app:layout_constraintEnd_toEndOf="@+id/glowBtn3"
+        app:layout_constraintStart_toStartOf="@+id/glowBtn3"
+        app:layout_constraintTop_toTopOf="@+id/glowBtn3"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButton2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginStart="16dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/glowBtn1"
+        app:layout_constraintEnd_toStartOf="@+id/glowBtn2"
+        app:layout_constraintStart_toEndOf="@+id/play_pausePA"
+        app:layout_constraintTop_toTopOf="@+id/glowBtn1"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButton4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="21dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton2"
+        app:layout_constraintEnd_toStartOf="@+id/play_pausePA"
+        app:layout_constraintStart_toEndOf="@+id/glowBtn3"
+        app:layout_constraintTop_toTopOf="@+id/glowButton2"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButton6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton"
+        app:layout_constraintEnd_toStartOf="@+id/glowButton8"
+        app:layout_constraintTop_toTopOf="@+id/glowButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButton8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.savantech.seekarc.SeekArc
+        android:id="@+id/seekArc"
+        android:layout_width="380dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:visibility="visible"
+        app:arcColor="@android:color/darker_gray"
+        app:arcWidth="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glowButton6"
+        app:maxProgress="100"
+        app:progress="0"
+        app:progressColor="@color/colorPrimary"
+        app:roundCorner="true"
+        app:seekDirection="anticlockwise"
+        app:startAngle="380"
+        app:sweepAngle="140"
+        app:thumbColor="@android:color/holo_blue_light"
+        app:thumbRadius="8dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonMore"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_more"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="35dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton8"
+        app:layout_constraintEnd_toEndOf="@+id/glowButton8"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/glowButton8"
+        app:layout_constraintTop_toTopOf="@+id/glowButton8"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

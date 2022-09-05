@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Music Bay</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="read_these_terms_and_conditions_carefully_before_using_things_to_do_mobile_application">Read these Terms and Conditions carefully before using the Music Bay mobile application.</string>
+    <string name="your_access_to_and_use_of_the_service_is_conditioned_on_your_acceptance_of_and_compliance_with_these_terms_these_terms_apply_to_all_visitors_users_and_others_who_access_or_use_the_service">Your access to and use of the service is conditioned on your acceptance of and compliance with these terms. These terms apply to all visitors, users and others who access or use the service.</string>
+    <string name="things_to_do_application_may_contain_links_to_third_party_websites_that_are_not_owned_or_controlled_by_developers_developer_shall_not_be_responsible_or_liable_directly_or_indirectly_for_any_damage_or_loss_or_alleged_to_be_caused_by_or_in_connection_with_use_of_or_reliace_on_any_such_content_and_information">Music Bay application may contain links to third party websites that are not owned or controlled by developers. Developer shall not be responsible or liable directly or indirectly for any damage or loss or alleged to be caused by or in connection with use of or reliace on any such content and information.</string>
+    <string name="user_must_agree_not_to_reverse_engineer_decompile_or_attempt_to_gain_access_to_code_or_assets_of_things_to_do_application">User must agree not to reverse engineer, decompile or attempt to gain access to code or assets of Music Bay application.</string>
+    <string name="developer_reverse_the_right_at_our_sole_discretion_to_modify_or_replace_these_terms_at_any_time_without_notice">Developer reverse the right, at our sole discretion, to modify or replace these terms at any time without notice.</string>
+    <string name="if_you_have_any_questions_about_these_terms_please_contact_developer">If you have any questions about these Terms, Please contact developer.</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="agree">AGREE</string>
+</resources>

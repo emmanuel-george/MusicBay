@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootNP"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorc"
+    tools:context=".fragments.NowPlaying">
+
+    <TextView
+        android:id="@+id/songNameNP"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/songImgNP"
+        android:layout_toStartOf="@id/playPauseBtnNP"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="Song Name"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/playPauseBtnNP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="5dp"
+        android:layout_toStartOf="@id/nextBtnNP"
+        android:backgroundTint="@color/colorc"
+        app:icon="@drawable/ic_playicon"
+        app:iconSize="30dp"
+        app:iconTint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/nextBtnNP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorc"
+        app:icon="@drawable/ic_nexticon"
+        app:iconSize="30dp"
+        app:iconTint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/songImgNP"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:src="@drawable/music"
+        app:shapeAppearanceOverlay="@style/curved" />
+
+
+</RelativeLayout>

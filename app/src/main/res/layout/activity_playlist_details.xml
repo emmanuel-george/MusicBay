@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".activities.PlaylistDetails">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backBtnPDA"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabCustomSize="35dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton78"
+        app:layout_constraintEnd_toEndOf="@+id/glowButton78"
+        app:layout_constraintStart_toStartOf="@+id/glowButton78"
+        app:layout_constraintTop_toTopOf="@+id/glowButton78"
+        app:maxImageSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButton78"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+
+        android:id="@+id/playlistNamePD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-thin"
+        android:singleLine="true"
+        android:text="PlayLists"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/playlistImgPD"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/music"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playlistNamePD" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playlistDetailsRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="280dp"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_icon"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playlistImgPD" />
+
+    <TextView
+        android:id="@+id/moreInfoPD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:text="Playlist Name"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/playlistImgPD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playlistImgPD"
+        app:layout_constraintTop_toTopOf="@+id/playlistImgPD" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navPD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:itemBackground="@color/black"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_pd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

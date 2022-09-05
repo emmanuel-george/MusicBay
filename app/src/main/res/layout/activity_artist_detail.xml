@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".activities.ArtistDetailActivity">
+
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButto8"
+        android:layout_width="40dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pressedGlowSize="20dp"
+        app:unpressedGlowSize="10dp"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBackADA"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        android:tintMode="add"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButto8"
+        app:layout_constraintEnd_toEndOf="@+id/glowButto8"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/glowButto8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <com.sanojpunchihewa.glowbutton.GlowButton
+        android:id="@+id/glowButton5"
+        android:layout_width="355dp"
+        android:layout_height="355dp"
+        android:layout_marginTop="32dp"
+        app:cornerRadius="200dp"
+        app:glowColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:unpressedGlowSize="25dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:cardCornerRadius="300dp"
+        app:layout_constraintBottom_toBottomOf="@+id/glowButton5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glowButton5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/artistPhotoADA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Artist Image"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/musiccover" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/artistDetailRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glowButton5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

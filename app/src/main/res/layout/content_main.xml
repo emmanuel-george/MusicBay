@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primaryDarkColor"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" >
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@color/black"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicatorColor="#009688"
+        app:tabMode="scrollable"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="center"
+        app:tabIndicatorHeight="40dp"
+        app:tabTextColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/allTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/songTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Songs" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/albumTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Albums" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/artistTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artists" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/folderTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Folders" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nowPlaying"
+        android:name="com.george.sliceoflife.extrabeat.fragments.NowPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/viewpager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_now_playing" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

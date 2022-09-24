@@ -181,7 +181,7 @@ class MusicService : Service(), AudioManager.OnAudioFocusChangeListener {
     }
 
     override fun onAudioFocusChange(focusChange: Int) {
-        if (focusChange <= 0 && PlayerActivity.isPausedByUser) { //  ) {
+        if (focusChange <= 0 && PlayerActivity.isPausedByUser ) {
             // pause music
             play_pause.setImageResource(R.drawable.ic_play)
             NowPlaying.playPauseNPP.setIconResource(R.drawable.ic_playicon)
@@ -203,13 +203,13 @@ class MusicService : Service(), AudioManager.OnAudioFocusChangeListener {
 //            mediaPlayer!!.start()
 //        }
 
-        else{
-            play_pause.setImageResource(R.drawable.ic_pause)
-            NowPlaying.playPauseNPP.setIconResource(R.drawable.ic_pauseicon)
-            showNotification(R.drawable.ic_pauseicon)
-            PlayerActivity.isPlaying = true
-            mediaPlayer!!.start()
-        }
+//        else{
+//            play_pause.setImageResource(R.drawable.ic_pause)
+//            NowPlaying.playPauseNPP.setIconResource(R.drawable.ic_pauseicon)
+//            showNotification(R.drawable.ic_pauseicon)
+//            PlayerActivity.isPlaying = true
+//            mediaPlayer!!.start()
+//        }
     }
 
     fun getSessionId(): Int {

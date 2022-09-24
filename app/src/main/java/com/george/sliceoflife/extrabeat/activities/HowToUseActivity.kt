@@ -19,7 +19,7 @@ class HowToUseActivity : AppCompatActivity() {
             webView.settings.javaScriptEnabled = true
             webView.settings.builtInZoomControls = true
             webView.settings.displayZoomControls = false
-            webView.loadUrl("https://www.youtube.com/watch?v=jkvMr2hfQuQ")
+            webView.loadUrl("https://www.youtube.com/watch?v=wN8IrL0qK04")
             webView.setLayerType(View.LAYER_TYPE_HARDWARE, null)
             webView.webChromeClient = WebChromeClient()
         } catch (e:Exception) {

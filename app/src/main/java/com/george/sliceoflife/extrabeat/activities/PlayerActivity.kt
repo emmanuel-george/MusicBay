@@ -612,7 +612,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
                 shuffleBtn.setImageResource(R.drawable.ic_shuffle_on)
             }
             setLayout()
-            createMediaPlayer()
+
 
         } else {
             setSongPosition(increment = false)
@@ -622,11 +622,10 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
                 //  musicListPA.addAll(musicFilesMA)
                 musicListPA.shuffle()
             }
-            createMediaPlayer()
 
         }
         song_artist.text = musicListPA[songPosition].artist
-
+        createMediaPlayer()
         setRecentlyPlayedSongs()
 
 //        setGlowColor()
